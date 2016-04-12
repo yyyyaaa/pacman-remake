@@ -9,7 +9,6 @@
 #include <string>
 #include <algorithm>
 
-
 //----------------
 //--Pacman sprite will use global coords
 //--Player saves Tile position (node coords)
@@ -41,7 +40,7 @@ public:
 
 	//update game state
 	void updatePlayer(float interval);
-	void updatePlayerSprite(float interval);
+	void updatePlayerSprite(float interval, EventKeyboard::KeyCode direction);
 	void updateScene(float interval);
 	int signum(float x);
 
@@ -51,6 +50,13 @@ public:
 	void clampVelocityX();
 	//clamp the velocity Y axis
 	void clampVelocityY();
+
+	//setup animations for pacman
+	cocos2d::Vector<SpriteFrame*> getAnimation(const char* format, int count);
+	void setupMoveUpAnim();
+	void setupMoveDownAnim();
+	void setupMoveRightAnim();
+	void setupMoveLeftAnim();
 
 	void setupAnimations();
 };

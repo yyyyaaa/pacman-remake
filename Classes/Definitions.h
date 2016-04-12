@@ -8,7 +8,7 @@ USING_NS_CC;
 #define SCALE_FACTOR 1.5
 #define PACMAN_SCALE 1.2
 
-const std::string MAP_NAME = "pactilemap.tmx";
+const std::string MAP_NAME = "newmap.tmx";
 
 const EventKeyboard::KeyCode ENTER = EventKeyboard::KeyCode::KEY_KP_ENTER;
 const EventKeyboard::KeyCode UP_ARROW = EventKeyboard::KeyCode::KEY_UP_ARROW;

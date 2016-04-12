@@ -11,6 +11,7 @@ public:
 	//FIELDS
 	cocos2d::TMXTiledMap* _tilemap;
 	cocos2d::TMXLayer* _background;
+	cocos2d::TMXLayer* _path;
 	cocos2d::Point _spawningPoint;
 
 	//METHODS
@@ -21,11 +22,15 @@ public:
 	cocos2d::Point getSpawnPoint();
 	cocos2d::TMXTiledMap* getMap();
 	cocos2d::TMXLayer* getBackground();
+	cocos2d::TMXLayer* getPath();
 
 	//convert from tile coords to global
-	cocos2d::Point positionForTileCoordinate(cocos2d::Size s, Point point);
+	cocos2d::Point tileCoordinateToPosition(cocos2d::Size s, cocos2d::Point point);
 	//reverse
-	cocos2d::Point tileCoordinateForPosition(cocos2d::Size s, Point point);
+	cocos2d::Point positionToTileCoordinate(cocos2d::Size s, cocos2d::Point point);
+
+	//check if path tile
+	bool isValidPath(Point mapcoord);
 
 	//constructor, destructor
 	Level();
